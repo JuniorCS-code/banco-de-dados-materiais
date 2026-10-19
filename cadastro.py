@@ -1,6 +1,8 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
+import pyautogui as pa
+
 
 # Passo 1: Criar a tela do sistema
 
@@ -16,6 +18,7 @@ categoria = st.sidebar.selectbox('Categoria',['', 'Abertura', 'Casa', 'Chapa','C
 'Elétrica','EPI', 'Estética Automotiva', 'Ferragem', 'Ferramenta', 'Fixação', 'Hidraulica', 'Mecânica',
 'Perfil', 'Serviço'])
 botao = st.sidebar.button('Salvar')
+botao2 = st.sidebar.button('Limpar')
 
 # Salvar os dados na planilha
 
@@ -24,6 +27,13 @@ if botao:
     tabela.loc[len(tabela)] = novo_cadastro
     tabela.to_csv('bancodedados.csv', index=False)
     st.success('Cadastro Realizado Com Sucesso!')
+
+if botao2:
+    pa.click(x=1620, y=291)
+    pa.hotkey('ctrl', 'a')
+    pa.press('del')
+    pa.click(x=1502, y=140)
+    
 
 # Mostrando a Base de dados
 
