@@ -15,9 +15,9 @@ data = st.sidebar.date_input('Data')
 produto = st.sidebar.text_input('Nome do Produto')
 valor = st.sidebar.number_input('Valor (R$)')
 fornecedor = st.sidebar.text_input('Fornecedor')
-categoria = st.sidebar.selectbox('Categoria',['', 'Abertura', 'Casa', 'Chapa','Civil', 'Consumível',
-'Elétrica','EPI', 'Estética Automotiva', 'Ferragem', 'Ferramenta', 'Fixação', 'Hidraulica', 'Mecânica',
-'Perfil', 'Serviço'])
+categoria = st.sidebar.selectbox('Categoria',['', 'Abertura', 'Casa', 'Chapa','Civil', 'Consumivel',
+'Eletrica','EPI', 'Estetica Automotiva', 'Ferragem', 'Ferramenta', 'Fixacao', 'Hidraulica', 'Mecanica',
+'Perfil', 'Servico'])
 botao = st.sidebar.button('Salvar')
 
 
